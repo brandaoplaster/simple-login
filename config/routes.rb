@@ -1,3 +1,11 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  mount_devise_token_auth_for 'User', at: 'auth/v1/user'
+
+  get "home" => "home#index"
+
+  namespace :admin do
+    namespace :v1 do
+      get "dashboard" => "dashboard#index"
+    end
+  end
 end
