@@ -41,3 +41,6 @@ docker compose run --rm app bundle exec rails db:drop
 email: user@test.com
 password: 123456789
 ```
+
+### Access front of application
+Here [simple login vue](https://github.com/brandaoplaster/simple-login-vue).
